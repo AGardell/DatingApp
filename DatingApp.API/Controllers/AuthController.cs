@@ -1,5 +1,6 @@
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using DatingApp.API.Data;
@@ -51,7 +52,8 @@ namespace DatingApp.API.Controllers
             User userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
             if (userFromRepo == null)
-                return Unauthorized();
+                return StatusCode((int)HttpStatusCode.Unauthorized, "Unable to locate user. Please verify your credentials and try again.");
+                //return Unauthorized();
 
             // Claims are bits of information stored in token so program does not have to re-query the database everytime.
             var claims = new[]
