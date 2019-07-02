@@ -8,10 +8,14 @@ POST http://localhost:5000/api/auth/login HTTP/1.1
 Content-Type: application/json
 
 {
-	"username": "ruby",
-	"password": "woof123"
+	"username": "lola",
+	"password": "password"
 }
 
 ###
 GET http://localhost:5000/api/values
-Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJqb2huIiwibmJmIjoxNTYxMzc0ODcxLCJleHAiOjE1NjE0NjEyNzEsImlhdCI6MTU2MTM3NDg3MX0.I4TAGy2P4-AeS7hqeBiKXA5W3mrZivGa1_ETKNE_OR_LsCp6t6Mv9-MuGOL4IDGQlcvUcLjflaaCr94nNFKaqQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJsb2xhIiwibmJmIjoxNTYyMDY0MzU0LCJleHAiOjE1NjIxNTA3NTQsImlhdCI6MTU2MjA2NDM1NH0.un7Hk8CCyAiWD4j8Ld-StJof2XTFN1wHd7v-WsEBqpk6HoS4hBPjNgfnorddyYX3jjrhrd78TbhqHdeaWS1CkQ
+
+###
+GET http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJsb2xhIiwibmJmIjoxNTYyMDY0MzU0LCJleHAiOjE1NjIxNTA3NTQsImlhdCI6MTU2MjA2NDM1NH0.un7Hk8CCyAiWD4j8Ld-StJof2XTFN1wHd7v-WsEBqpk6HoS4hBPjNgfnorddyYX3jjrhrd78TbhqHdeaWS1CkQ
